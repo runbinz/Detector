@@ -62,6 +62,11 @@ print(times)
 for i in range(0, len(times), 2):
     df.loc[len(df)] = [times[i], times[i+1]]
 
+#for i in range(0, len(times), 2):
+    #df = df.append({"Start": times[i], "End": times[i+1]}, ignore_index=True)
+#new pandas version does not work for this code
+
+
 df.to_csv("Times.csv")
 
 video.release()
